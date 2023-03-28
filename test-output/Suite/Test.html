@@ -1,0 +1,443 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>54/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Mar 27 17:13:44 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>170 seconds (170727 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestCase.BasicWillFlow.Paymentsummary()'><b>Paymentsummary</b><br>Test class: TestCase.BasicWillFlow</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(text(),&apos; Wallet Credit &apos;)]&quot;}
+  (Session info: chrome=111.0.5563.110)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5849cdb5c375b6fa96707867f95c1613, findElement {using=xpath, value=//div[contains(text(),&apos; Wallet Credit &apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.110, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\91956\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55251}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55251/devtoo..., se:cdpVersion: 111.0.5563.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5849cdb5c375b6fa96707867f95c1613
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at pageobjects.PaymentSummaryPage.WalletCredit(PaymentSummaryPage.java:34)
+	at TestCase.BasicWillFlow.Paymentsummary(BasicWillFlow.java:175)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace96858414", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace96858414'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(text(),&apos; Wallet Credit &apos;)]&quot;}
+  (Session info: chrome=111.0.5563.110)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5849cdb5c375b6fa96707867f95c1613, findElement {using=xpath, value=//div[contains(text(),&apos; Wallet Credit &apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.110, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\91956\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55251}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55251/devtoo..., se:cdpVersion: 111.0.5563.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5849cdb5c375b6fa96707867f95c1613
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at pageobjects.PaymentSummaryPage.WalletCredit(PaymentSummaryPage.java:34)
+	at TestCase.BasicWillFlow.Paymentsummary(BasicWillFlow.java:175)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>10</td>
+<td>TestCase.BasicWillFlow@7ac0e420</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestCase.ManageView.MyTrustedPerson()'><b>MyTrustedPerson</b><br>Test class: TestCase.ManageView</td>
+<td></td>
+<td>0</td>
+<td>TestCase.ManageView@3a0baae5</td></tr>
+<tr>
+<td title='TestCase.myProfile.IdNumber()'><b>IdNumber</b><br>Test class: TestCase.myProfile</td>
+<td></td>
+<td>4</td>
+<td>TestCase.myProfile@79517588</td></tr>
+<tr>
+<td title='TestCase.ManageView.MyAsset()'><b>MyAsset</b><br>Test class: TestCase.ManageView</td>
+<td></td>
+<td>0</td>
+<td>TestCase.ManageView@3a0baae5</td></tr>
+<tr>
+<td title='TestCase.myProfile.IdType()'><b>IdType</b><br>Test class: TestCase.myProfile</td>
+<td></td>
+<td>2</td>
+<td>TestCase.myProfile@79517588</td></tr>
+<tr>
+<td title='TestCase.Loginpage.loginNegativeMailID()'><b>loginNegativeMailID</b><br>Test class: TestCase.Loginpage<br>Parameters: qa+safa@sfsf.com</td>
+<td></td>
+<td>1</td>
+<td>TestCase.Loginpage@8ad6665</td></tr>
+<tr>
+<td title='TestCase.myProfile.Save()'><b>Save</b><br>Test class: TestCase.myProfile</td>
+<td></td>
+<td>0</td>
+<td>TestCase.myProfile@79517588</td></tr>
+<tr>
+<td title='TestCase.myProfile.Address1()'><b>Address1</b><br>Test class: TestCase.myProfile</td>
+<td></td>
+<td>0</td>
+<td>TestCase.myProfile@79517588</td></tr>
+<tr>
+<td title='TestCase.BasicWillFlow.RemoveBeneficiary()'><b>RemoveBeneficiary</b><br>Test class: TestCase.BasicWillFlow</td>
+<td></td>
+<td>6</td>
+<td>TestCase.BasicWillFlow@7ac0e420</td></tr>
+<tr>
+<td title='TestCase.myProfile.AccountNumber()'><b>AccountNumber</b><br>Test class: TestCase.myProfile</td>
+<td></td>
+<td>0</td>
+<td>TestCase.myProfile@79517588</td></tr>
+<tr>
+<td title='TestCase.myProfile.State()'><b>State</b><br>Test class: TestCase.myProfile</td>
+<td></td>
+<td>0</td>
+<td>TestCase.myProfile@79517588</td></tr>
+<tr>
+<td title='TestCase.SwitchProfile.switchManager()'><b>switchManager</b><br>Test class: TestCase.SwitchProfile</td>
+<td></td>
+<td>0</td>
+<td>TestCase.SwitchProfile@4eb386df</td></tr>
+<tr>
+<td title='TestCase.myProfile.myprofile()'><b>myprofile</b><br>Test class: TestCase.myProfile</td>
+<td></td>
+<td>2</td>
+<td>TestCase.myProfile@79517588</td></tr>
+<tr>
+<td title='TestCase.Dashboard.loginPositive()'><b>loginPositive</b><br>Test class: TestCase.Dashboard</td>
+<td></td>
+<td>2</td>
+<td>TestCase.Dashboard@2f1de2d6</td></tr>
+<tr>
+<td title='TestCase.ManageBeneficairy.loginPositive()'><b>loginPositive</b><br>Test class: TestCase.ManageBeneficairy</td>
+<td></td>
+<td>4</td>
+<td>TestCase.ManageBeneficairy@289710d9</td></tr>
+<tr>
+<td title='TestCase.Loginpage.loginPositive()'><b>loginPositive</b><br>Test class: TestCase.Loginpage</td>
+<td></td>
+<td>1</td>
+<td>TestCase.Loginpage@8ad6665</td></tr>
+<tr>
+<td title='TestCase.SwitchProfile.switchAgent()'><b>switchAgent</b><br>Test class: TestCase.SwitchProfile</td>
+<td></td>
+<td>0</td>
+<td>TestCase.SwitchProfile@4eb386df</td></tr>
+<tr>
+<td title='TestCase.SwitchProfile.switchCustomer()'><b>switchCustomer</b><br>Test class: TestCase.SwitchProfile</td>
+<td></td>
+<td>0</td>
+<td>TestCase.SwitchProfile@4eb386df</td></tr>
+<tr>
+<td title='TestCase.myProfile.BranchName()'><b>BranchName</b><br>Test class: TestCase.myProfile</td>
+<td></td>
+<td>0</td>
+<td>TestCase.myProfile@79517588</td></tr>
+<tr>
+<td title='TestCase.BasicWillFlow.CreateMenuNavigation()'><b>CreateMenuNavigation</b><br>Test class: TestCase.BasicWillFlow</td>
+<td></td>
+<td>2</td>
+<td>TestCase.BasicWillFlow@7ac0e420</td></tr>
+<tr>
+<td title='TestCase.BasicWillFlow.Selectproducts()'><b>Selectproducts</b><br>Test class: TestCase.BasicWillFlow</td>
+<td></td>
+<td>2</td>
+<td>TestCase.BasicWillFlow@7ac0e420</td></tr>
+<tr>
+<td title='TestCase.BasicWillFlow.proceedNext()'><b>proceedNext</b><br>Test class: TestCase.BasicWillFlow</td>
+<td></td>
+<td>10</td>
+<td>TestCase.BasicWillFlow@7ac0e420</td></tr>
+<tr>
+<td title='TestCase.ManageView.MyGuardian()'><b>MyGuardian</b><br>Test class: TestCase.ManageView</td>
+<td></td>
+<td>0</td>
+<td>TestCase.ManageView@3a0baae5</td></tr>
+<tr>
+<td title='TestCase.ManageView.Mybeneficiary()'><b>Mybeneficiary</b><br>Test class: TestCase.ManageView</td>
+<td></td>
+<td>4</td>
+<td>TestCase.ManageView@3a0baae5</td></tr>
+<tr>
+<td title='TestCase.ManageView.MyWitness()'><b>MyWitness</b><br>Test class: TestCase.ManageView</td>
+<td></td>
+<td>0</td>
+<td>TestCase.ManageView@3a0baae5</td></tr>
+<tr>
+<td title='TestCase.myProfile.BankName()'><b>BankName</b><br>Test class: TestCase.myProfile</td>
+<td></td>
+<td>0</td>
+<td>TestCase.myProfile@79517588</td></tr>
+<tr>
+<td title='TestCase.SwitchProfile.switchPartner()'><b>switchPartner</b><br>Test class: TestCase.SwitchProfile</td>
+<td></td>
+<td>2</td>
+<td>TestCase.SwitchProfile@4eb386df</td></tr>
+<tr>
+<td title='TestCase.myProfile.PhoneNumber()'><b>PhoneNumber</b><br>Test class: TestCase.myProfile</td>
+<td></td>
+<td>0</td>
+<td>TestCase.myProfile@79517588</td></tr>
+<tr>
+<td title='TestCase.BasicWillFlow.loginPositive()'><b>loginPositive</b><br>Test class: TestCase.BasicWillFlow</td>
+<td></td>
+<td>2</td>
+<td>TestCase.BasicWillFlow@7ac0e420</td></tr>
+<tr>
+<td title='TestCase.myProfile.CountryCode()'><b>CountryCode</b><br>Test class: TestCase.myProfile</td>
+<td></td>
+<td>2</td>
+<td>TestCase.myProfile@79517588</td></tr>
+<tr>
+<td title='TestCase.myProfile.Address2()'><b>Address2</b><br>Test class: TestCase.myProfile</td>
+<td></td>
+<td>0</td>
+<td>TestCase.myProfile@79517588</td></tr>
+<tr>
+<td title='TestCase.Loginpage.loginNegativeInvalidOTP()'><b>loginNegativeInvalidOTP</b><br>Test class: TestCase.Loginpage</td>
+<td></td>
+<td>1</td>
+<td>TestCase.Loginpage@8ad6665</td></tr>
+<tr>
+<td title='TestCase.ManageBeneficairy.AddBeneficiary()'><b>AddBeneficiary</b><br>Test class: TestCase.ManageBeneficairy</td>
+<td></td>
+<td>0</td>
+<td>TestCase.ManageBeneficairy@289710d9</td></tr>
+<tr>
+<td title='TestCase.Dashboard.MyData()'><b>MyData</b><br>Test class: TestCase.Dashboard</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Dashboard@2f1de2d6</td></tr>
+<tr>
+<td title='TestCase.BasicWillFlow.CreateBaseWill()'><b>CreateBaseWill</b><br>Test class: TestCase.BasicWillFlow</td>
+<td></td>
+<td>0</td>
+<td>TestCase.BasicWillFlow@7ac0e420</td></tr>
+<tr>
+<td title='TestCase.ManageBeneficairy.Identificationdetails()'><b>Identificationdetails</b><br>Test class: TestCase.ManageBeneficairy</td>
+<td></td>
+<td>2</td>
+<td>TestCase.ManageBeneficairy@289710d9</td></tr>
+<tr>
+<td title='TestCase.myProfile.IdIssuedCountry()'><b>IdIssuedCountry</b><br>Test class: TestCase.myProfile</td>
+<td></td>
+<td>2</td>
+<td>TestCase.myProfile@79517588</td></tr>
+<tr>
+<td title='TestCase.Dashboard.Dashboard()'><b>Dashboard</b><br>Test class: TestCase.Dashboard</td>
+<td></td>
+<td>1</td>
+<td>TestCase.Dashboard@2f1de2d6</td></tr>
+<tr>
+<td title='TestCase.Loginpage.loginNegativeMailID()'><b>loginNegativeMailID</b><br>Test class: TestCase.Loginpage<br>Parameters: qa+adda@octewo.com</td>
+<td></td>
+<td>2</td>
+<td>TestCase.Loginpage@8ad6665</td></tr>
+<tr>
+<td title='TestCase.myProfile.MaritalStatus()'><b>MaritalStatus</b><br>Test class: TestCase.myProfile</td>
+<td></td>
+<td>0</td>
+<td>TestCase.myProfile@79517588</td></tr>
+<tr>
+<td title='TestCase.ManageView.loginPositive()'><b>loginPositive</b><br>Test class: TestCase.ManageView</td>
+<td></td>
+<td>2</td>
+<td>TestCase.ManageView@3a0baae5</td></tr>
+<tr>
+<td title='TestCase.Loginpage.loginNegativeMailID()'><b>loginNegativeMailID</b><br>Test class: TestCase.Loginpage<br>Parameters: qa+sfsf@fdfds.com</td>
+<td></td>
+<td>1</td>
+<td>TestCase.Loginpage@8ad6665</td></tr>
+<tr>
+<td title='TestCase.ManageBeneficairy.Beneficiarydetails()'><b>Beneficiarydetails</b><br>Test class: TestCase.ManageBeneficairy</td>
+<td></td>
+<td>4</td>
+<td>TestCase.ManageBeneficairy@289710d9</td></tr>
+<tr>
+<td title='TestCase.myProfile.loginPositive()'><b>loginPositive</b><br>Test class: TestCase.myProfile</td>
+<td></td>
+<td>4</td>
+<td>TestCase.myProfile@79517588</td></tr>
+<tr>
+<td title='TestCase.ManageBeneficairy.Mybeneficiary()'><b>Mybeneficiary</b><br>Test class: TestCase.ManageBeneficairy</td>
+<td></td>
+<td>3</td>
+<td>TestCase.ManageBeneficairy@289710d9</td></tr>
+<tr>
+<td title='TestCase.myProfile.PostalCode()'><b>PostalCode</b><br>Test class: TestCase.myProfile</td>
+<td></td>
+<td>0</td>
+<td>TestCase.myProfile@79517588</td></tr>
+<tr>
+<td title='TestCase.BasicWillFlow.Reviewstep()'><b>Reviewstep</b><br>Test class: TestCase.BasicWillFlow</td>
+<td></td>
+<td>0</td>
+<td>TestCase.BasicWillFlow@7ac0e420</td></tr>
+<tr>
+<td title='TestCase.BasicWillFlow.Witnessstep()'><b>Witnessstep</b><br>Test class: TestCase.BasicWillFlow</td>
+<td></td>
+<td>3</td>
+<td>TestCase.BasicWillFlow@7ac0e420</td></tr>
+<tr>
+<td title='TestCase.SwitchProfile.loginPositive()'><b>loginPositive</b><br>Test class: TestCase.SwitchProfile</td>
+<td></td>
+<td>2</td>
+<td>TestCase.SwitchProfile@4eb386df</td></tr>
+<tr>
+<td title='TestCase.BasicWillFlow.BasicDistribution()'><b>BasicDistribution</b><br>Test class: TestCase.BasicWillFlow</td>
+<td></td>
+<td>1</td>
+<td>TestCase.BasicWillFlow@7ac0e420</td></tr>
+<tr>
+<td title='TestCase.myProfile.CityName()'><b>CityName</b><br>Test class: TestCase.myProfile</td>
+<td></td>
+<td>0</td>
+<td>TestCase.myProfile@79517588</td></tr>
+<tr>
+<td title='TestCase.ManageView.MyJointcustomer()'><b>MyJointcustomer</b><br>Test class: TestCase.ManageView</td>
+<td></td>
+<td>0</td>
+<td>TestCase.ManageView@3a0baae5</td></tr>
+<tr>
+<td title='TestCase.BasicWillFlow.Previewstep()'><b>Previewstep</b><br>Test class: TestCase.BasicWillFlow</td>
+<td></td>
+<td>1</td>
+<td>TestCase.BasicWillFlow@7ac0e420</td></tr>
+<tr>
+<td title='TestCase.ManageView.MyExecutor()'><b>MyExecutor</b><br>Test class: TestCase.ManageView</td>
+<td></td>
+<td>0</td>
+<td>TestCase.ManageView@3a0baae5</td></tr>
+<tr>
+<td title='TestCase.BasicWillFlow.InsructionStep()'><b>InsructionStep</b><br>Test class: TestCase.BasicWillFlow</td>
+<td></td>
+<td>1</td>
+<td>TestCase.BasicWillFlow@7ac0e420</td></tr>
+</table><p>
+</body>
+</html>
